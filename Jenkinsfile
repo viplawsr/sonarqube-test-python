@@ -2,13 +2,7 @@ pipeline{
     agent any
     stages{
         
-        stage('build') {
-          steps {
-            sh 'coverage run test_add.py'
-            sh 'coverage report -m'
-            sh 'coverage xml -i'
-          }
-        }
+        
         stage('Sonar cube'){
             steps{
                 script{
