@@ -2,12 +2,7 @@ pipeline{
     agent any
     stages{
         
-        stage('Cloning'){
-            steps{
-                 
-                git branch: 'main',  url: 'https://viplawsr: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@github.com/viplawsr/sonarqube-test-python.git'
-            }
-        }
+
         
         stage('Sonar cube'){
             steps{
