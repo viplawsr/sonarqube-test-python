@@ -8,7 +8,7 @@ pipeline{
                    def scannerHome = tool 'SonarScan';
                     
                         withSonarQubeEnv('Sonar'){
-                           sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey = check"
+                           sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=check"
                     }
                     }
                     
