@@ -1,24 +1,19 @@
-pipeline{
-    agent any
-    stages{
+node{
+   
         
         stage('Sonar qube'){
             steps{
-                script{
+                
                      def scannerHome = tool 'SonarScan';
                     
                         withSonarQubeEnv('Sonar'){
                           sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=check"
-                        
-                    }
-                    
-                    
-                }
+                           }
                 
                 
                 
             }
         }
-    }
+    
    
 }
