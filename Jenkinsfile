@@ -1,6 +1,7 @@
 pipeline{
     agent any
-    
+        
+    stages{
         stage('Sonar cube'){
             steps{
                 script{
@@ -16,7 +17,7 @@ pipeline{
                 
                 
             }
-        
+        }
     
    
 }
